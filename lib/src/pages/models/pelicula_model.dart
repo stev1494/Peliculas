@@ -15,6 +15,9 @@ class Peliculas{
 }
 
 class Pelicula {
+  //Para hacer la diferencia entre los heroAnimations
+  String uniqueId;
+
   double popularity;
   int id;
   bool video;
@@ -72,6 +75,18 @@ class Pelicula {
      return 'https://image.tmdb.org/t/p/w500/$posterPath';
     }
   }
+
+
+
+   getBackgroundImg(){
+    if( posterPath == null){
+      return 'https://cdn11.bigcommerce.com/s-lhibl/stencil/0f397120-088c-0137-97c6-00b93c38be4d/icons/icon-no-image.svg';
+    }else{
+     return 'https://image.tmdb.org/t/p/w500/$backdropPath';
+    }
+  }
+
+
 }
 
 
